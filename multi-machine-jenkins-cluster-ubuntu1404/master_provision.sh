@@ -9,8 +9,11 @@ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sour
 sudo apt-get update
 
 #install openjdk 
-sudo apt-get -y install default-jdk 
-
+#sudo apt-get -y install default-jdk
+sudo add-apt-repository ppa:webupd8team/java -y
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+sudo apt-get install oracle-java8-set-default
+java -version
 #install jenkins
 sudo apt-get -y install jenkins
-
